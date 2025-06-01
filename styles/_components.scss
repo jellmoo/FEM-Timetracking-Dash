@@ -5,12 +5,12 @@
     color: $purple-500;
     transition: color 0.3s ease;
     cursor: pointer;
-    padding: $spacing-2 0; // Added padding for better touch targets
+    padding: $spacing-2 0;
 
     &:hover,
     &:focus {
         color: $white;
-        outline: none; // Remove default focus outline
+        outline: none;
     }
 
     &:active,
@@ -37,25 +37,25 @@
 }
 
 .card--work { 
-    @include card-background($orange, '/images/icon-work.svg');
+    @include card-background($orange, './images/icon-work.svg');
 }
 
 .card--play { 
-    @include card-background($blue, '/images/icon-play.svg', top -5px right 15px);
+    @include card-background($blue, './images/icon-play.svg', top -5px right 15px);
 }
 
 .card--study { 
-    @include card-background($pink, '/images/icon-study.svg', top -8px right 15px);
+    @include card-background($pink, './images/icon-study.svg', top -8px right 15px);
 }   
 
 .card--exercise { 
-    @include card-background($green, '/images/icon-exercise.svg', top -3px right 15px);
+    @include card-background($green, './images/icon-exercise.svg', top -3px right 15px);
 }
 
 .card--social { 
-    @include card-background($purple-700, '/images/icon-social.svg', top -15px right 15px);
+    @include card-background($purple-700, './images/icon-social.svg', top -15px right 15px);
 }
 
 .card--self-care {
-    @include card-background($yellow, '/images/icon-self-care.svg');
+    @include card-background($yellow, './images/icon-self-care.svg');
 }

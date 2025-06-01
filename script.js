@@ -1,7 +1,7 @@
 let jsonData = [];
 let currentTimeframe = 'daily';
 
-fetch('/data.json')
+fetch('data.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -32,7 +32,7 @@ function createActivityCard(activity) {
       <div class="card__content">
         <div class="card__header">
           <h2 class="card__title">${activity.title}</h2>
-          <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="card__icon" />
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" class="card__icon" />
         </div>
         <div class="card__stats">
           <p class="card__current">${timeframe.current}hrs</p>
