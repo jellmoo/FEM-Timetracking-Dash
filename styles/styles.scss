@@ -1,0 +1,239 @@
+// main.scss - improved version
+@import "./reset";
+@import "./variables";
+@import "./typography";
+@import "./components";
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; // Better than setting height on .body in media queries
+    background-color: $navy-950;
+    color: $white;
+    font-family: "Rubik", sans-serif;
+    padding: $spacing-4;
+}
+
+.dashboard {
+    display: grid;
+    gap: $spacing-4;
+    width: 100%;
+    max-width: 327px; // Explicit mobile max-width
+
+    @include tablet {
+        max-width: 700px;
+        margin: 173px 78px;
+    }
+
+    @include desktop {
+        grid-template-columns: 255px 1fr;
+        grid-template-rows: auto;
+        gap: $spacing-5;
+        max-width: 1110px;
+        margin-top: 173px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: start;
+    }
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    background-color: $navy-900;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 203px;
+
+    @include desktop {
+        grid-column: 1;
+        max-height: 518px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        background-color: $purple-600;
+        border-radius: 15px;
+        padding: $spacing-5;
+        min-height: 133px;
+
+        @include desktop {
+            height: 354px;
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: $spacing-4;
+
+        @include desktop {
+            margin-left: 0;
+        }
+    }
+
+    &__description {
+        @include text-preset-6;
+        color: $navy-200;
+    }
+
+    &__name {
+        @include text-preset-4;
+
+        @include desktop {
+            @include text-preset-2;
+        }
+    }
+
+    &__image {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 3px solid $white;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        @include desktop {
+            width: 78px;
+            height: 78px;
+            margin-bottom: $spacing-6;
+        }
+    }
+
+    &__filters {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: $spacing-3;
+        @include text-preset-5-med;
+
+        @include desktop {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: $spacing-5;
+        }
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-4;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include desktop {
+        grid-column: 2;
+        gap: $spacing-5;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    height: 160px;
+    cursor: pointer; // Added for UX
+
+    @include tablet {
+        width: 215px;
+        height: 213px;
+    }
+
+    @include desktop {
+        width: 255px;
+        height: 244px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $navy-900;
+        border-radius: 13px;
+        height: 122px;
+        padding: $spacing-4;
+        transition: background-color 0.3s ease;
+
+        @include tablet {
+            height: 180px;
+        }
+
+        @include desktop {
+            height: 199px;
+            padding: $spacing-5;
+        }
+
+        &:hover {
+            background-color: $navy-800;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing-2;
+
+        @include tablet {
+            margin-bottom: $spacing-3;
+        }
+
+        @include desktop {
+            margin-bottom: $spacing-5;
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        transition: opacity 0.2s ease; // Smooth hover transition
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__title {
+        @include text-preset-5-med;
+    }
+
+    &__current {
+        @include text-preset-3;
+
+        @include tablet {
+            @include text-preset-1;
+            white-space: nowrap;
+            margin-bottom: $spacing-2;
+        }
+
+        @include desktop {
+            margin-bottom: $spacing-2;
+        }
+    }
+
+    &__previous {
+        @include text-preset-6;
+        color: $navy-200;
+    }
+}

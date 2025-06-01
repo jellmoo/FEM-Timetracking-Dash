@@ -1,0 +1,61 @@
+// buttons
+.btn {
+    background-color: transparent;
+    border: none;
+    color: $purple-500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    padding: $spacing-2 0; // Added padding for better touch targets
+
+    &:hover,
+    &:focus {
+        color: $white;
+        outline: none; // Remove default focus outline
+    }
+
+    &:active,
+    &.active {
+        color: $white;
+    }
+
+    @include desktop {
+        margin-bottom: $spacing-4;
+    }
+}
+
+@include desktop {
+    .btn {
+            margin-bottom: $spacing-4;
+        }
+}
+// activity cards
+@mixin card-background($color, $icon, $position: top -10px right 15px) {
+    background-color: $color;
+    background-image: url($icon);
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+.card--work { 
+    @include card-background($orange, '/images/icon-work.svg');
+}
+
+.card--play { 
+    @include card-background($blue, '/images/icon-play.svg', top -5px right 15px);
+}
+
+.card--study { 
+    @include card-background($pink, '/images/icon-study.svg', top -8px right 15px);
+}   
+
+.card--exercise { 
+    @include card-background($green, '/images/icon-exercise.svg', top -3px right 15px);
+}
+
+.card--social { 
+    @include card-background($purple-700, '/images/icon-social.svg', top -15px right 15px);
+}
+
+.card--self-care {
+    @include card-background($yellow, '/images/icon-self-care.svg');
+}

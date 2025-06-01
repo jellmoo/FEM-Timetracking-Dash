@@ -1,0 +1,41 @@
+@mixin text-preset-1 {
+    font-size: 3.5rem; //56px
+    line-height: 4.125rem; //66px
+    font-weight: 300;
+}
+
+@mixin text-preset-2 {
+    font-size: 2.5rem; //40px
+    line-height: 2.9375rem; //47px
+    font-weight: 300;
+}
+
+@mixin text-preset-3 {
+    font-size: 2rem; //32px
+    line-height: 2.375rem; //38px
+    font-weight: 300;
+}
+
+@mixin text-preset-4 {
+    font-size: 1.5rem;  //24px
+    line-height: 1.75rem; //28px
+    font-weight: 300;
+}
+
+@mixin text-preset-5-med {
+    font-size: 1.125rem; //18px
+    line-height: 1.3125rem; //21px
+    font-weight: 500;
+}
+
+@mixin text-preset-5-reg {
+    font-size: 1.125rem; //18px
+    line-height: 1.3125rem; //21px
+    font-weight: 400;
+}
+
+@mixin text-preset-6 {
+    font-size: 0.9375rem; //15px
+    line-height: 1.125rem; //18px
+    font-weight: 400;
+}
