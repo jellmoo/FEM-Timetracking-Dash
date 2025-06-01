@@ -37,25 +37,25 @@
 }
 
 .card--work { 
-    @include card-background($orange, './images/icon-work.svg');
+    @include card-background($orange, '/FEM-Timetracking-Dash/images/icon-work.svg');
 }
 
 .card--play { 
-    @include card-background($blue, './images/icon-play.svg', top -5px right 15px);
+    @include card-background($blue, '/FEM-Timetracking-Dash/images/icon-play.svg', top -5px right 15px);
 }
 
 .card--study { 
-    @include card-background($pink, './images/icon-study.svg', top -8px right 15px);
+    @include card-background($pink, '/FEM-Timetracking-Dash/images/icon-study.svg', top -8px right 15px);
 }   
 
 .card--exercise { 
-    @include card-background($green, './images/icon-exercise.svg', top -3px right 15px);
+    @include card-background($green, '/FEM-Timetracking-Dash/images/icon-exercise.svg', top -3px right 15px);
 }
 
 .card--social { 
-    @include card-background($purple-700, './images/icon-social.svg', top -15px right 15px);
+    @include card-background($purple-700, '/FEM-Timetracking-Dash/images/icon-social.svg', top -15px right 15px);
 }
 
 .card--self-care {
-    @include card-background($yellow, './images/icon-self-care.svg');
+    @include card-background($yellow, '/FEM-Timetracking-Dash/images/icon-self-care.svg');
 }

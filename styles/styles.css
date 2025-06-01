@@ -69,42 +69,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 .card--work {
   background-color: rgb(255, 139, 100);
-  background-image: url("./images/icon-work.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-work.svg");
   background-repeat: no-repeat;
   background-position: top -10px right 15px;
 }
 
 .card--play {
   background-color: rgb(85, 194, 230);
-  background-image: url("./images/icon-play.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-play.svg");
   background-repeat: no-repeat;
   background-position: top -5px right 15px;
 }
 
 .card--study {
   background-color: rgb(255, 94, 125);
-  background-image: url("./images/icon-study.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-study.svg");
   background-repeat: no-repeat;
   background-position: top -8px right 15px;
 }
 
 .card--exercise {
   background-color: rgb(75, 207, 130);
-  background-image: url("./images/icon-exercise.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-exercise.svg");
   background-repeat: no-repeat;
   background-position: top -3px right 15px;
 }
 
 .card--social {
   background-color: rgb(115, 53, 210);
-  background-image: url("./images/icon-social.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-social.svg");
   background-repeat: no-repeat;
   background-position: top -15px right 15px;
 }
 
 .card--self-care {
   background-color: rgb(241, 199, 91);
-  background-image: url("./images/icon-self-care.svg");
+  background-image: url("/FEM-Timetracking-Dash/images/icon-self-care.svg");
   background-repeat: no-repeat;
   background-position: top -10px right 15px;
 }
